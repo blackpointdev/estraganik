@@ -1,0 +1,40 @@
+body
+{
+    background-color: #F1F1F1 !important;
+}
+
+#navbarMain
+{
+    background-color: #F36F5C;
+}
+
+.navbar-brand
+{
+    letter-spacing: 7px;
+}
+
+.row
+{
+    margin-left: 5em;
+    margin-right: 5em;
+}
+
+.customRow
+{
+    margin-top: 1em;
+}
+
+.customColumn
+{
+    margin-left: 1em;
+    margin-right: 1em;
+    padding: 0px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: white;
+}
+
+#recommendedLabel
+{
+    font-weight: bold;
+    margin: 2em;
+}
