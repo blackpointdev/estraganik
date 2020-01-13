@@ -1,6 +1,7 @@
 body
 {
     background-color: #F1F1F1 !important;
+    font-family: 'Ubuntu', sans-serif !important;
 }
 
 #navbarMain
@@ -29,7 +30,7 @@ body
     margin-left: 1em;
     margin-right: 1em;
     padding: 0px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: -1px 1px 10px 0px #BDC1BF;
     background-color: white;
 }
 
@@ -37,4 +38,56 @@ body
 {
     font-weight: bold;
     margin: 2em;
+}
+
+.medium-header {
+    letter-spacing: 10px;
+    font-weight: 100;
+    /* margin: 1em; */
+    padding: 0.5em;
+    border-bottom: 1px solid #D4D4D4;
+}
+
+#login-card {
+    padding: 0.5em;
+}
+
+#login-form {
+    margin: 1em;
+}
+
+.form-control {
+    border-color: #DC453A;
+}
+
+.form-check input:checked {
+    background-color: red;
+    color: blue;
+}
+
+#forgot-password {
+    font-size: 0.9em;
+    font-weight: 100;
+}
+
+.submit-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 1.5em;
+    margin-top: 1.5em;
+    letter-spacing: 0.05em;
+}
+
+.btn {
+    background-color: #F36F5C;
+    color: white;
+    font-weight: 400;
+    letter-spacing: 2px;
+    padding: 1em 2em 1em 2em;
+}
+
+.btn:hover {
+    color: white;
+    background-color: rgb(247, 134, 117);
 }
