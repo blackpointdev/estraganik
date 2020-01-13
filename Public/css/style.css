@@ -107,15 +107,14 @@ body
 #need-account:before {
     border-top: 1px solid #D4D4D4;
     content:"";
-    margin: 0 auto; /* this centers the line to the full width specified */
-    position: absolute; /* positioning must be absolute here, and relative positioning must be applied to the parent */
+    margin: 0 auto;
+    position: absolute;
     top: 50%; left: 0; right: 0; bottom: 0;
     width: 100%;
     z-index: -1;
 }
 
 #need-account span { 
-    /* to hide the lines from behind the text, you have to set the background color the same as the container */ 
     background: #fff; 
     padding: 0 0.8em; 
 }
