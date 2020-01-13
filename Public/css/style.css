@@ -96,29 +96,24 @@ body
     background-color: rgb(247, 134, 117);
 }
 
-#need-account p {
-    overflow: hidden;
-    text-align: left; 
-    /* text-indent: 1em;  */
-}
-
-#need-account p:before,
-#need-account p:after {
-    background-color: #D4D4D4;
-    content: "";
-    display: inline-block;
-    height: 1px;
+#need-account {
+    font-size: 0.9em;
+    text-indent: 4em;
     position: relative;
-    vertical-align: middle;
-    width: 50%;
+    z-index: 1;
+}
+#need-account:before {
+    border-top: 1px solid #D4D4D4;
+    content:"";
+    margin: 0 auto; /* this centers the line to the full width specified */
+    position: absolute; /* positioning must be absolute here, and relative positioning must be applied to the parent */
+    top: 50%; left: 0; right: 0; bottom: 0;
+    width: 95%;
+    z-index: -1;
 }
 
-#need-account p:before {
-    right: 0.5em;
-    margin-left: -20%;
-}
-
-#need-account p:after {
-    left: 0.5em;
-    margin-right: -20%;
+#need-account span { 
+    /* to hide the lines from behind the text, you have to set the background color the same as the container */ 
+    background: #fff; 
+    padding: 0 0.8em; 
 }
