@@ -1,7 +1,7 @@
 body
 {
     background-color: #F1F1F1 !important;
-    font-family: 'Ubuntu', sans-serif !important;
+    font-family: 'Ubuntu', sans-serif;
 }
 
 #navbarMain
@@ -41,8 +41,9 @@ body
 }
 
 .medium-header {
-    letter-spacing: 10px;
+    letter-spacing: 5px;
     font-weight: 100;
+    font-size: 2.5em;
     /* margin: 1em; */
     padding: 0.5em;
     border-bottom: 1px solid #D4D4D4;
@@ -50,10 +51,13 @@ body
 
 #login-card {
     padding: 0.5em;
+    color: rgb(73, 73, 73);
 }
 
 #login-form {
     margin: 1em;
+    padding: 1.5em;
+    font-weight: lighter;
 }
 
 .form-control {
@@ -74,9 +78,9 @@ body
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    margin-bottom: 1.5em;
-    margin-top: 1.5em;
-    letter-spacing: 0.05em;
+    margin-bottom: 1em;
+    margin-top: 1em;
+    /* letter-spacing: 0.05em; */
 }
 
 .btn {
@@ -90,4 +94,31 @@ body
 .btn:hover {
     color: white;
     background-color: rgb(247, 134, 117);
+}
+
+#need-account p {
+    overflow: hidden;
+    text-align: left; 
+    /* text-indent: 1em;  */
+}
+
+#need-account p:before,
+#need-account p:after {
+    background-color: #D4D4D4;
+    content: "";
+    display: inline-block;
+    height: 1px;
+    position: relative;
+    vertical-align: middle;
+    width: 50%;
+}
+
+#need-account p:before {
+    right: 0.5em;
+    margin-left: -20%;
+}
+
+#need-account p:after {
+    left: 0.5em;
+    margin-right: -20%;
 }
