@@ -1,7 +1,13 @@
+html, body {
+    height: 100%;
+}
+
 body
 {
     background-color: #F1F1F1 !important;
     font-family: 'Ubuntu', sans-serif;
+    display: flex;
+    flex-direction: column;
 }
 
 #navbarMain
@@ -32,6 +38,10 @@ body
     padding: 0px;
     box-shadow: -1px 1px 10px 0px #BDC1BF;
     background-color: white;
+}
+
+#customContainer {
+    flex: 1 0 auto;
 }
 
 #recommendedLabel
@@ -129,4 +139,8 @@ body
     border: 1px solid black;
     padding: 2em;
     text-align: center;
+}
+
+#footer {
+    flex-shrink: 0;
 }
