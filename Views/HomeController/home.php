@@ -65,11 +65,7 @@
         </div>
     </div>
 
-    <footer id="footer" class="py-4 bg-dark text-white-50">
-        <div class="container text-center">
-            <small>Copyright &copy; blackpoint</small>
-        </div>
-    </footer>
+    <?php include(dirname(__DIR__).'/Common/footer.php'); ?>
 
     <!-- Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"

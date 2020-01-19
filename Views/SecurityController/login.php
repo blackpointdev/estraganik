@@ -22,15 +22,15 @@
                 <div class="card">
                     <h2 class="medium-header">Zaloguj się</h2>
 
-                    <form id="login-form">
+                    <form id="login-form" action="/login" method="post">
                         <div class="form-group">
                             <label for="email-input">E-mail</label>
-                            <input type="email" class="form-control" id="email-input" aria-describedby="emailHelp"
+                            <input name="email" type="email" class="form-control" id="email-input" aria-describedby="emailHelp"
                                 placeholder="email@example.com">
                         </div>
                         <div class="form-group">
                             <label for="password-input">Hasło</label>
-                            <input type="password" class="form-control" id="password-input"
+                            <input name="password" type="password" class="form-control" id="password-input"
                                 placeholder="&#8226&#8226&#8226&#8226">
                         </div>
 
@@ -47,12 +47,23 @@
                             <button type="submit" class="btn">ZALOGUJ SIĘ</button>
                         </div>
                     </form>
-                    
+
+                    <?php
+                    if(isset($messages)){
+                        echo("<div class='alert alert-danger'>");
+                        foreach($messages as $message) {
+                            echo $message;
+                        }
+                        echo("</div>");
+                    }
+                    ?>
+
                     <div id="need-account">
                         <span>Potrzebujesz konta?</span>
                     </div>
 
                     <div id="register-link"><a href="#">Zarejestruj się</a></div>
+
                 </div>
             </div>
             <div class="col-md customColumn">
@@ -65,11 +76,7 @@
         </div>
     </div>
 
-    <footer id="footer" class="py-4 bg-dark text-white-50">
-        <div class="container text-center">
-            <small>Copyright &copy; blackpoint</small>
-        </div>
-    </footer>
+    <?php include(dirname(__DIR__).'/Common/footer.php'); ?>
 
     <!-- Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
