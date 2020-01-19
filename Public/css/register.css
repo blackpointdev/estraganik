@@ -1,0 +1,36 @@
+#register-card {
+    margin: 1em;
+    height: auto;
+}
+
+.register-row {
+    margin: 0;
+}
+
+.form-group {
+    padding: 0.3em;
+}
+
+#socialmedia-buttons {
+    align-items: center;
+}
+
+#socialmedia-buttons > button {
+    width: 90%;
+    margin: 3em auto;
+    display:block;
+}
+
+#fb-btn {
+    background-color: #3b5998;
+}
+
+#google-btn {
+    background-color: white;
+    color: #666666;
+    border: 1px solid #c8ccce;
+}
+
+.col-md-7 {
+    border-right: 1px solid #D4D4D4;
+}

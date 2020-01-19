@@ -23,6 +23,10 @@ class Router
             'home' => [
                 'controller' => 'Src\Controllers\HomeController',
                 'action' => 'show'
+            ],
+            'register' => [
+                'controller' => 'Src\Controllers\RegisterController',
+                'action' => 'register'
             ]
         ];
     }

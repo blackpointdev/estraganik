@@ -22,8 +22,8 @@ body
 
 .row
 {
-    margin-left: 5em;
-    margin-right: 5em;
+    margin-left: 3em;
+    margin-right: 3em;
 }
 
 .customRow
@@ -36,7 +36,6 @@ body
     margin-left: 1em;
     margin-right: 1em;
     padding: 0px;
-    box-shadow: -1px 1px 10px 0px #BDC1BF;
     background-color: white;
 }
 
@@ -64,6 +63,7 @@ body
     color: rgb(73, 73, 73);
     height: 100%;
     border: none;
+    box-shadow: -1px 1px 10px 0px #BDC1BF;
 }
 
 #login-form {

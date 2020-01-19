@@ -42,7 +42,7 @@
                     <?php
                     if (!isset($_SESSION['id'])) {
                         echo("<a class='dropdown-item' href='/login'>Zaloguj</a>
-                              <a class='dropdown-item' href='#'>Zarejestruj</a>");
+                              <a class='dropdown-item' href='/register'>Zarejestruj</a>");
                     }
                     else {
                         echo("<a class=\"dropdown-item\" href=\"#\">Wystaw przedmiot</a>
