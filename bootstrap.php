@@ -8,4 +8,4 @@ use Src\System\DBConnection;
 $dotenv = new Dotenv(__DIR__);
 $dotenv->load();
 
-$dbConnection = (new DBConnection())->getConnection();
+// $dbConnection = (new DBConnection())->getConnection();
