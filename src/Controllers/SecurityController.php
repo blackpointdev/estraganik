@@ -24,7 +24,9 @@ class SecurityController extends Controller
                 return;
             }
 
-            if ($user->getPassword() !== $password) {
+            $passwordHash = $user->getPassword();
+            $isPasswordValid = password_verify($password, $passwordHash);
+            if (!$isPasswordValid) {
                 $this->render('login', ['messages' => ['Niepoprawne hasło!']]);
                 return;
             }

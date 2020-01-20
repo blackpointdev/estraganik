@@ -81,7 +81,7 @@
 
                     <div class="submit-wrapper">
                         <div class="form-check">
-                            <input type="checkbox" class="form-check-input" id="remember-password-check">
+                            <input type="checkbox" class="form-check-input" id="remember-password-check" name="terms">
                             <label class="form-check-label" for="remember-password-check">
                                 Oświadczam że znam i akceptuję <a href="#">Regulamin</a> serwisu eStraganik.pl</label>
                         </div>
