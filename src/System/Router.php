@@ -35,6 +35,10 @@ class Router
             'product' => [
                 'controller' => 'Src\Controllers\ProductController',
                 'action' => 'showProduct'
+            ],
+            'create-offer' => [
+                'controller' => 'Src\Controllers\OfferController',
+                'action' => 'createOffer'
             ]
         ];
     }

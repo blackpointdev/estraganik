@@ -28,20 +28,20 @@
                         <div class="form-group col-md">
                             <label for="name-input">Imię</label>
                             <input name="name" type="text" class="form-control" id="name-input"
-                                   placeholder="Jan">
+                                   placeholder="Jan" required>
                         </div>
 
                         <div class="form-group col-md">
-                            <label for="surname-input">Hasło</label>
+                            <label for="surname-input">Nazwisko</label>
                             <input name="surname" type="text" class="form-control" id="surname-input"
-                                   placeholder="Kowalski">
+                                   placeholder="Kowalski" required>
                         </div>
                     </div>
                     <div class="row register-row">
                         <div class="form-group col-md">
                             <label for="address-input">Adres</label>
                             <input name="address" type="text" class="form-control" id="address-input"
-                                   placeholder="Zielona 23/54">
+                                   placeholder="Zielona 23/54" required>
                         </div>
                     </div>
 
@@ -49,39 +49,40 @@
                         <div class="form-group col-md">
                             <label for="city-input">Miasto</label>
                             <input name="city" type="text" class="form-control" id="city-input"
-                                   placeholder="Kraków">
+                                   placeholder="Kraków" required>
                         </div>
 
                         <div class="form-group col-md-2">
                             <label for="zip-input">Kod pocztowy</label>
                             <input name="zip" type="text" class="form-control" id="zip-input"
-                                   placeholder="00-000">
+                                   placeholder="00-000" required>
                         </div>
 
                         <div class="form-group col-md">
                             <label for="country-input">Kraj</label>
                             <input name="country" type="text" class="form-control" id="country-input"
-                                   placeholder="Polska">
+                                   placeholder="Polska" required>
                         </div>
                     </div>
 
                     <div class="row register-row">
                         <div class="form-group col-md">
                             <label for="email-input">Email</label>
-                            <input name="email" type="text" class="form-control" id="email-input"
-                                   placeholder="email@example.com">
+                            <input name="email" type="email" class="form-control" id="email-input"
+                                   placeholder="email@example.com" required>
                         </div>
 
                         <div class="form-group col-md">
                             <label for="password-input">Hasło</label>
                             <input name="password" type="password" class="form-control" id="password-input"
-                                   placeholder="&#8226&#8226&#8226&#8226">
+                                   placeholder="&#8226&#8226&#8226&#8226" required>
                         </div>
                     </div>
 
                     <div class="submit-wrapper">
                         <div class="form-check">
-                            <input type="checkbox" class="form-check-input" id="remember-password-check" name="terms">
+                            <input type="checkbox" class="form-check-input" id="remember-password-check" name="terms"
+                                   required>
                             <label class="form-check-label" for="remember-password-check">
                                 Oświadczam że znam i akceptuję <a href="#">Regulamin</a> serwisu eStraganik.pl</label>
                         </div>

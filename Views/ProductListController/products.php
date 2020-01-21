@@ -28,15 +28,15 @@
             <div class="col-md">
 
                 <?php foreach($products as $product): ?>
-                <a class="hyperlink" href="product/<?= $product->getId() ?>">
+                <a class="hyperlink" href="../product/<?= $product->getId() ?>">
                     <div class="row product-row">
                         <div class="col-md-2">
-                            <img class="thumbnail" src="<?= $product->getThubnailPicture() ?>"/>
+                            <img class="thumbnail rounded mx-auto d-block" src="<?= $product->getThumbnailPicture() ?>"/>
                         </div>
                         <div class="col-md">
                             <div class="product-info-wrapper">
                                 <span class="offer-name"><?= $product->getTitle() ?></span>
-                                <p class="seller-name"><?= $product->getIdSeller() ?></p>
+                                <p class="seller-name"><?= $product->getSeller() ?></p>
                                 <span class="sold">Sprzedano: <?= $product->getSold() ?> sztuk</span>
                             </div>
                         </div>

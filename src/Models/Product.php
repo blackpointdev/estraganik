@@ -9,33 +9,45 @@ class Product
     private $id;
     private $title;
     private $id_seller;
+    private $seller;
+    private $id_category;
+    private $category;
     private $condition;
     private $sold;
+    private $available;
     private $price;
     private $description;
-    private $thubnail_picture;
+    private $thumbnail_picture;
 
     /**
      * Product constructor.
      * @param $id
      * @param $title
      * @param $id_seller
+     * @param $seller
+     * @param $id_category
+     * @param $category
      * @param $condition
      * @param $sold
+     * @param $available
      * @param $price
      * @param $description
-     * @param $thubnail_picture
+     * @param $thumbnail_picture
      */
-    public function __construct($id, $title, $id_seller, $condition, $sold, $price, $description, $thubnail_picture)
+    public function __construct($id, $title, $id_seller, $seller, $id_category, $category, $condition, $sold, $available, $price, $description, $thumbnail_picture)
     {
         $this->id = $id;
         $this->title = $title;
         $this->id_seller = $id_seller;
+        $this->seller = $seller;
+        $this->id_category = $id_category;
+        $this->category = $category;
         $this->condition = $condition;
         $this->sold = $sold;
+        $this->available = $available;
         $this->price = $price;
         $this->description = $description;
-        $this->thubnail_picture = $thubnail_picture;
+        $this->thumbnail_picture = $thumbnail_picture;
     }
 
     /**
@@ -47,27 +59,11 @@ class Product
     }
 
     /**
-     * @param mixed $id
-     */
-    public function setId($id): void
-    {
-        $this->id = $id;
-    }
-
-    /**
      * @return mixed
      */
     public function getTitle()
     {
         return $this->title;
-    }
-
-    /**
-     * @param mixed $title
-     */
-    public function setTitle($title): void
-    {
-        $this->title = $title;
     }
 
     /**
@@ -79,11 +75,27 @@ class Product
     }
 
     /**
-     * @param mixed $id_seller
+     * @return mixed
      */
-    public function setIdSeller($id_seller): void
+    public function getSeller()
     {
-        $this->id_seller = $id_seller;
+        return $this->seller;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getIdCategory()
+    {
+        return $this->id_category;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getCategory()
+    {
+        return $this->category;
     }
 
     /**
@@ -95,14 +107,6 @@ class Product
     }
 
     /**
-     * @param mixed $condition
-     */
-    public function setCondition($condition): void
-    {
-        $this->condition = $condition;
-    }
-
-    /**
      * @return mixed
      */
     public function getSold()
@@ -111,11 +115,11 @@ class Product
     }
 
     /**
-     * @param mixed $sold
+     * @return mixed
      */
-    public function setSold($sold): void
+    public function getAvailable()
     {
-        $this->sold = $sold;
+        return $this->available;
     }
 
     /**
@@ -127,14 +131,6 @@ class Product
     }
 
     /**
-     * @param mixed $price
-     */
-    public function setPrice($price): void
-    {
-        $this->price = $price;
-    }
-
-    /**
      * @return mixed
      */
     public function getDescription()
@@ -143,28 +139,11 @@ class Product
     }
 
     /**
-     * @param mixed $description
-     */
-    public function setDescription($description): void
-    {
-        $this->description = $description;
-    }
-
-    /**
      * @return mixed
      */
-    public function getThubnailPicture()
+    public function getThumbnailPicture()
     {
-        return $this->thubnail_picture;
+        return $this->thumbnail_picture;
     }
-
-    /**
-     * @param mixed $thubnail_picture
-     */
-    public function setThubnailPicture($thubnail_picture): void
-    {
-        $this->thubnail_picture = $thubnail_picture;
-    }
-
 
 }

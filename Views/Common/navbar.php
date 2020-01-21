@@ -45,7 +45,7 @@
                               <a class='dropdown-item' href='/register'>Zarejestruj</a>");
                     }
                     else {
-                        echo("<a class=\"dropdown-item\" href=\"#\">Wystaw przedmiot</a>
+                        echo("<a class=\"dropdown-item\" href=\"/create-offer\">Wystaw przedmiot</a>
                                 <a class=\"dropdown-item\" href=\"#\">Zakupione przedmioty</a>
                                 <a class=\"dropdown-item\" href=\"#\">Wiadomości</a>
                                 <div class=\"dropdown-divider\"></div>
