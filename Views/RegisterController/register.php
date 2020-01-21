@@ -18,7 +18,7 @@
 <?php include(dirname(__DIR__) . '/Common/navbar.php'); ?>
 
 <div class="container-fluid" id="customContainer">
-    <div class="card" id="register-card">
+    <div class="card wide-card">
         <h2 class="medium-header">Załóż konto</h2>
 
         <div class="row register-row">

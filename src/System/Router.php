@@ -27,6 +27,14 @@ class Router
             'register' => [
                 'controller' => 'Src\Controllers\RegisterController',
                 'action' => 'register'
+            ],
+            'products' => [
+                'controller' => 'Src\Controllers\ProductListController',
+                'action' => 'load'
+            ],
+            'product' => [
+                'controller' => 'Src\Controllers\ProductController',
+                'action' => 'showProduct'
             ]
         ];
     }

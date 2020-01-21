@@ -66,6 +66,26 @@ body
     box-shadow: -1px 1px 10px 0px #BDC1BF;
 }
 
+.wide-card {
+    margin: 1em;
+    height: auto;
+}
+
+@media screen and (max-width: 480px) {
+    .wide-card {
+        margin: 0;
+    }
+
+    .card {
+        margin: 0;
+    }
+
+    .container-fluid {
+        margin: 0;
+        padding: 0;
+    }
+}
+
 #login-form {
     margin: 1em;
     padding: 1.5em;
@@ -143,4 +163,13 @@ body
 
 #footer {
     flex-shrink: 0;
+}
+
+.hyperlink {
+    color: #494949;
+}
+
+.hyperlink:hover {
+    text-decoration: none;
+    color: red;
 }

@@ -24,7 +24,7 @@ class DBConnection
     public function connect() {
         try {
             $dbConnection = new \PDO(
-                "mysql:host=$this->host;port=$this->port;dbname=$this->db",
+                "mysql:host=$this->host;port=$this->port;dbname=$this->db;charset=utf8",
                 $this->user,
                 $this->password
             );

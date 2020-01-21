@@ -19,11 +19,8 @@
         <div class="row customRow">
             <div class="col-sm-2 customColumn">
                 <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Elektronika</li>
-                    <li class="list-group-item">Książki</li>
-                    <li class="list-group-item">Moda</li>
-                    <li class="list-group-item">Dom</li>
-                    <li class="list-group-item">Motoryzacja</li>
+                    <li class="list-group-item"><a class="hyperlink" href="/products/1">Elektronika</a></li>
+                    <li class="list-group-item"><a class="hyperlink" href="/products/2">Sport</a></li>
                 </ul>
             </div>
             <div class="col-sm customColumn">

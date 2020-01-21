@@ -34,7 +34,7 @@
                             echo $_SESSION['id'];
                         }
                         else {
-                            echo Konto;
+                            echo("Konto");
                         }
                     ?>
                 </a>
