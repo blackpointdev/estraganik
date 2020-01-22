@@ -97,10 +97,12 @@
 
 .tab button:hover {
     background-color: #f3a797;
+    color: white;
 }
 
 .tab button.active {
     background-color: #f3a797;
+    color: white;
 }
 
 /* Style the tab content */
