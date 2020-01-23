@@ -33,7 +33,8 @@ class UserRepository
             $user['email'],
             $user['password'],
             $user['name'],
-            $user['surname']
+            $user['surname'],
+            $user['id']
         );
     }
 }

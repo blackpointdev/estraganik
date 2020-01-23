@@ -1,3 +1,9 @@
+<?php
+if(!isset($_SESSION['id']) and !isset($_SESSION['email'])) {
+    header("Location: /login");
+}
+?>
+
 <!DOCTYPE html>
 <html lang="pl">
 
@@ -23,7 +29,7 @@
 
         <div class="row register-row">
             <div class="col-md-7">
-                <form id="new-offer-form" action="/create-offer" method="post">
+                <form id="new-offer-form" action="/create-offer" method="post" enctype="multipart/form-data">
                     <div class="row">
                         <div class="form-group col-md">
                             <label for="name-input">Tytuł oferty</label>
@@ -34,8 +40,15 @@
                     <div class="row">
                         <div class="form-group col-md">
                             <label for="description-input">Treść oferty</label>
-                            <textarea name="description" type="text" class="form-control" id="description-input"
+                            <textarea name="description" class="form-control" id="description-input"
                                       placeholder="Opis..." required></textarea>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-3">
+                            <label for="condition-input">Stan</label>
+                            <input name="condition" type="text" class="form-control" id="condition-input"
+                                   placeholder="Nowy/używany" required>
                         </div>
                     </div>
                     <div class="row">
@@ -45,6 +58,11 @@
                                 <option value="1">Elektronika</option>
                                 <option value="2">Sport</option>
                             </select>
+                        </div>
+                        <div class="form-group col-md-2">
+                            <label for="available-input">Liczba sztuk</label>
+                            <input name="available" type="number" class="form-control" id="available-input"
+                                   value="1" required>
                         </div>
                         <div class="form-group col-md">
                             <label for="price-input">Cena</label>
@@ -57,7 +75,7 @@
                         <div class="form-group col-md">
                             <label for="image-input">Zdjęcie</label>
                             <input name="image" type="file" class="form-control-file" id="image-input"
-                                   placeholder=". . . zł" required>
+                                   placeholder=". . . zł">
                         </div>
                     </div>
 
@@ -68,7 +86,7 @@
 
                 <?php
                 if (isset($messages)) {
-                    echo("<div class='alert alert-danger'>");
+                    echo("<div class='alert alert-primary'>");
                     foreach ($messages as $message) {
                         echo $message;
                     }

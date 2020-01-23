@@ -39,7 +39,7 @@ class RegisterController extends Controller
             }
 
             $sql = "INSERT INTO Users (email, password, name, surname, id_address) VALUES 
-                    (:email, :password, :name, :surname, :id_address)";
+                    (:email, :password, :name, :surname, :id_address);";
             $stmt = $dbConnection->prepare($sql);
 
             //Bind our variables.

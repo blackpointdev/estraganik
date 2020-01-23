@@ -30,8 +30,8 @@
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <?php
-                        if (isset($_SESSION['id'])) {
-                            echo $_SESSION['id'];
+                        if (isset($_SESSION['email'])) {
+                            echo $_SESSION['email'];
                         }
                         else {
                             echo("Konto");
@@ -40,17 +40,17 @@
                 </a>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                     <?php
-                    if (!isset($_SESSION['id'])) {
-                        echo("<a class='dropdown-item' href='/login'>Zaloguj</a>
-                              <a class='dropdown-item' href='/register'>Zarejestruj</a>");
-                    }
-                    else {
-                        echo("<a class=\"dropdown-item\" href=\"/create-offer\">Wystaw przedmiot</a>
-                                <a class=\"dropdown-item\" href=\"#\">Zakupione przedmioty</a>
-                                <a class=\"dropdown-item\" href=\"#\">Wiadomości</a>
-                                <div class=\"dropdown-divider\"></div>
-                                <a class=\"dropdown-item\" href=\"/logout\">Wyloguj</a>");
-                    }
+                        if (!isset($_SESSION['email'])) {
+                            echo("<a class='dropdown-item' href='/login'>Zaloguj</a>
+                                  <a class='dropdown-item' href='/register'>Zarejestruj</a>");
+                        }
+                        else {
+                            echo("<a class=\"dropdown-item\" href=\"/create-offer\">Wystaw przedmiot</a>
+                                    <a class=\"dropdown-item\" href=\"#\">Zakupione przedmioty</a>
+                                    <a class=\"dropdown-item\" href=\"#\">Wiadomości</a>
+                                    <div class=\"dropdown-divider\"></div>
+                                    <a class=\"dropdown-item\" href=\"/logout\">Wyloguj</a>");
+                        }
                     ?>
                 </div>
             </li>

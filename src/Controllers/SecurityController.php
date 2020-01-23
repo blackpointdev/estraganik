@@ -31,8 +31,8 @@ class SecurityController extends Controller
                 return;
             }
 
-            $_SESSION["id"] = $user->getEmail();
-            $_SESSION["role"] = $user->getRole();
+            $_SESSION['user_id'] = $user->getId();
+            $_SESSION['email'] = $user->getEmail();
 
             $url = "http://$_SERVER[HTTP_HOST]/";
             header("Location: {$url}");
