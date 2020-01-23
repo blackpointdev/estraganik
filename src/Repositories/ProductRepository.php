@@ -17,10 +17,17 @@ class ProductRepository
 
     public function getAllProducts() {
         $stmt = $this->db->prepare('
-            SELECT * FROM Products
+            SELECT 
+                   p.id, p.title, p.id_seller, p.id_category, p.condition, p.sold, p.available, p.price, p.description,
+                   p.thumbnail_picture, u.name, u.surname, c.name as category_name
+            FROM 
+                 Products p
+            INNER JOIN Users u
+                on p.id_seller = u.id
+            INNER JOIN Categories c 
+                on p.id_category = c.id
         ');
         $stmt->execute();
-
         $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
         if($products == false) {
@@ -30,29 +37,13 @@ class ProductRepository
         $products_array = [];
 
         foreach ($products as $p) {
-            $stmt = $this->db->prepare('
-            SELECT name, surname FROM Users WHERE id = :id_seller
-        ');
-
-            $stmt->bindParam(':id_seller', $p['id_seller']);
-            $stmt->execute();
-            $seller = $stmt->fetch(PDO::FETCH_ASSOC);
-
-            $stmt = $this->db->prepare('
-            SELECT name FROM Categories WHERE id = :id_category
-        ');
-            $stmt->bindParam(':id_seller', $p['id_category']);
-            $stmt->execute();
-
-            $category = $stmt->fetch(PDO::FETCH_ASSOC);
-
             $product = new Product(
                 $p['id'],
                 $p['title'],
                 $p['id_seller'],
-                $seller['name'] . ' ' . $seller['surname'],
+                $p['name'] . ' ' . $p['surname'],
                 $p['id_category'],
-                $category,
+                $p['category_name'],
                 $p['condition'],
                 $p['sold'],
                 $p['available'],
@@ -68,7 +59,17 @@ class ProductRepository
 
     public function getProductsByCategory($id_category) {
         $stmt = $this->db->prepare('
-            SELECT * FROM Products WHERE id_category = :id_category
+            SELECT 
+                   p.id, p.title, p.id_seller, p.id_category, p.condition, p.sold, p.available, p.price, p.description,
+                   p.thumbnail_picture, u.name, u.surname, c.name as category_name
+            FROM 
+                 Products p
+            INNER JOIN Users u
+                on p.id_seller = u.id
+            INNER JOIN Categories c 
+                on p.id_category = c.id
+            WHERE 
+                  id_category = :id_category
         ');
 
         $stmt->bindParam(':id_category', $id_category);
@@ -83,29 +84,13 @@ class ProductRepository
         $products_array = [];
 
         foreach ($products as $p) {
-            $stmt = $this->db->prepare('
-            SELECT name, surname FROM Users WHERE id = :id_seller
-        ');
-
-            $stmt->bindParam(':id_seller', $p['id_seller']);
-            $stmt->execute();
-            $seller = $stmt->fetch(PDO::FETCH_ASSOC);
-
-            $stmt = $this->db->prepare('
-            SELECT name FROM Categories WHERE id = :id_category
-        ');
-            $stmt->bindParam(':id_category', $p['id_category']);
-            $stmt->execute();
-
-            $category = $stmt->fetch(PDO::FETCH_ASSOC);
-
             $product = new Product(
                 $p['id'],
                 $p['title'],
                 $p['id_seller'],
-                $seller['name'] . ' ' . $seller['surname'],
+                $p['name'] . ' ' . $p['surname'],
                 $p['id_category'],
-                $category,
+                $p['category_name'],
                 $p['condition'],
                 $p['sold'],
                 $p['available'],
@@ -121,41 +106,34 @@ class ProductRepository
 
     public function getProductById($id) {
         $stmt = $this->db->prepare('
-            SELECT * FROM Products WHERE id = :id
+            SELECT 
+                   p.id, p.title, p.id_seller, p.id_category, p.condition, p.sold, p.available, p.price, p.description,
+                   p.thumbnail_picture, u.name, u.surname, c.name as category_name
+            FROM 
+                 Products p
+            INNER JOIN Users u
+                on p.id_seller = u.id
+            INNER JOIN Categories c 
+                on p.id_category = c.id
+            WHERE 
+                  p.id = :id
         ');
 
         $stmt->bindParam(':id', $id);
         $stmt->execute();
-
         $product = $stmt->fetch(PDO::FETCH_ASSOC);
 
         if($product == false) {
             return null;
         }
 
-        $stmt = $this->db->prepare('
-            SELECT name, surname FROM Users WHERE id = :id_seller
-        ');
-
-        $stmt->bindParam(':id_seller', $product['id_seller']);
-        $stmt->execute();
-        $seller = $stmt->fetch(PDO::FETCH_ASSOC);
-
-        $stmt = $this->db->prepare('
-            SELECT name FROM Categories WHERE id = :id_category
-        ');
-        $stmt->bindParam(':id_category', $product['id_category']);
-        $stmt->execute();
-
-        $category = $stmt->fetch(PDO::FETCH_ASSOC);
-
-        $productObject = new Product(
+        return new Product(
             $product['id'],
             $product['title'],
             $product['id_seller'],
-            $seller['name'] . ' ' . $seller['surname'],
+            $product['name'] . ' ' . $product['surname'],
             $product['id_category'],
-            $category,
+            $product['category_name'],
             $product['condition'],
             $product['sold'],
             $product['available'],
@@ -163,6 +141,5 @@ class ProductRepository
             $product['description'],
             $product['thumbnail_picture']
         );
-        return $productObject;
     }
 }

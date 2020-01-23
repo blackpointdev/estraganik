@@ -21,6 +21,10 @@ class OfferController extends Controller
             $price = !empty($_POST['price']) ? trim($_POST['price']) : null;
             $image = basename($_FILES["image"]["name"]);
 
+            if($image === '') {
+                $image = "../../Public/iamges/no-image-icon.png";
+            }
+
             $sql = "INSERT INTO Products (
                 title, id_seller, id_category, `condition`, available, price, description, thumbnail_picture
             ) 
@@ -50,7 +54,6 @@ class OfferController extends Controller
             return;
         }
 
-        echo $_SESSION['user_id'];
         $this->render('create_offer');
     }
 }
