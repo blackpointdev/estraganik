@@ -62,7 +62,7 @@
                         <span>Potrzebujesz konta?</span>
                     </div>
 
-                    <div id="register-link"><a href="#">Zarejestruj się</a></div>
+                    <div id="register-link"><a href="../register">Zarejestruj się</a></div>
 
                 </div>
             </div>

@@ -18,6 +18,7 @@ class Product
     private $price;
     private $description;
     private $thumbnail_picture;
+    private $sponsored;
 
     /**
      * Product constructor.
@@ -33,8 +34,10 @@ class Product
      * @param $price
      * @param $description
      * @param $thumbnail_picture
+     * @param $sponsored
      */
-    public function __construct($id, $title, $id_seller, $seller, $id_category, $category, $condition, $sold, $available, $price, $description, $thumbnail_picture)
+    public function __construct($id, $title, $id_seller, $seller, $id_category, $category, $condition,
+                                $sold, $available, $price, $description, $thumbnail_picture, $sponsored)
     {
         $this->id = $id;
         $this->title = $title;
@@ -48,6 +51,7 @@ class Product
         $this->price = $price;
         $this->description = $description;
         $this->thumbnail_picture = $thumbnail_picture;
+        $this->sponsored = $sponsored;
     }
 
     /**
@@ -145,5 +149,14 @@ class Product
     {
         return $this->thumbnail_picture;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getSponsored()
+    {
+        return $this->sponsored;
+    }
+
 
 }
