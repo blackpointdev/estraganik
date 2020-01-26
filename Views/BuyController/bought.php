@@ -22,7 +22,7 @@
 
                 <?php
                 if (isset($messages)) {
-                    echo("<div class='alert alert-danger'>");
+                    echo("<div class='alert alert-primary'>");
                     foreach ($messages as $message) {
                         echo $message;
                     }
