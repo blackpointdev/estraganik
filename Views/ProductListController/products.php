@@ -45,7 +45,7 @@
                         </div>
                         <div class="col-md-2 price-wrapper">
                             <br>
-                            <span class="price"><?= $product->getPrice() ?> zł</span>
+                            <span class="price"><?= number_format($product->getPrice(), 2) ?> zł</span>
                             <span class="shipment-info">Dostawa od <b>30,99 zł</b></span>
                         </div>
                     </div>

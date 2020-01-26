@@ -28,6 +28,15 @@ class BuyController extends Controller
             $this->render('product');
             return;
         }
+        $available = $product->getAvailable() - 1;
+
+        $stmt = $dbConnection->prepare('
+            UPDATE Products SET available = :available WHERE id = :product_id;
+        ');
+
+        $stmt->bindValue(":available", $available);
+        $stmt->bindValue(":product_id", $product_id);
+        $stmt->execute();
 
         $sql = "INSERT INTO Transactions (
                 id_buyer, id_seller, id_product, date, ammount

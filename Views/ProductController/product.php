@@ -39,7 +39,7 @@
                     <div class="buy-container">
                         <div class="row price-label-wrapper">
                             <label class="price-label">Cena</label>
-                            <label class="price"><?= $product->getPrice() ?> zł</label>
+                            <label class="price"><?= number_format($product->getPrice(), 2) ?> zł</label>
                         </div>
                         <div class="row btns-wrapper">
                             <button class="btn">DODAJ DO KOSZYKA</button>
@@ -63,7 +63,7 @@
                 <?= $product->getDescription() ?>
             </div>
             <div class="tabcontent" id="shipment">
-                No więc jest taka sprawa, nie ma dostawy hehe
+                Dostawa - <b>PROMOCJA! Dostawa bezpłatna na terenie Polski!</b>
             </div>
         </div>
     </div>
