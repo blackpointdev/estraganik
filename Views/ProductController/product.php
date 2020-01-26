@@ -43,7 +43,9 @@
                         </div>
                         <div class="row btns-wrapper">
                             <button class="btn">DODAJ DO KOSZYKA</button>
-                            <button class="btn">KUP TERAZ</button>
+                            <a href="../buy/<?= $product->getId() ?>">
+                                <button class="btn">KUP TERAZ</button>
+                            </a>
                         </div>
                     </div>
                 </div>

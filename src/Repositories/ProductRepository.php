@@ -154,10 +154,8 @@ class ProductRepository
             INNER JOIN Categories c 
                 on p.id_category = c.id
             WHERE 
-                  id_category = :id_category
+                  p.sponsored = 1;
         ');
-
-        $stmt->bindParam(':id_category', $id_category);
         $stmt->execute();
 
         $products = $stmt->fetchAll(PDO::FETCH_ASSOC);

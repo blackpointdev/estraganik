@@ -14,7 +14,7 @@
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navarBasket" role="button" data-toggle="dropdown"
                    aria-haspopup="true" aria-expanded="false">
-                    Koszyk
+                    <i class="fas fa-shopping-cart"></i>
                 </a>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navarBasket">
                     <a class="dropdown-item" href="#">Rower 1</a>
@@ -22,9 +22,6 @@
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item" href="#">Kup teraz</a>
                 </div>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Powiadomienia</a>
             </li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
@@ -34,7 +31,7 @@
                             echo $_SESSION['email'];
                         }
                         else {
-                            echo("Konto");
+                            echo("<i class=\"fas fa-users\"></i>");
                         }
                     ?>
                 </a>
@@ -56,5 +53,7 @@
             </li>
         </ul>
     </div>
+
+    <script src="https://kit.fontawesome.com/6939d4585e.js" crossorigin="anonymous"></script>
 
 </nav>

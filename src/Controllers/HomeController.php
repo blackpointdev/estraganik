@@ -13,7 +13,8 @@ class HomeController extends Controller
         $dbConnection = (new DBConnection())->connect();
         $productRepository = new ProductRepository($dbConnection);
 
+        $products_array = $productRepository->getSponsoredProducts();
 
-        $this->render('home');
+        $this->render('home', ['products' => $products_array]);
     }
 }

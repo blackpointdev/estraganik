@@ -46,18 +46,24 @@
                 </div>
             </div>
         </div>
-        <div class="row customRow">
-            <div class="col-sm customColumn">
-                <span id="recommendedLabel">Polecane dla Ciebie</span>
-                <div class="card" style="width: 18rem;">
-                    <img src="../../Public/iamges/rower.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Szybki rower</h5>
-                        <p class="card-text">Taniocha szybciutki rower jest</p>
-                        <a href="#" class="btn btn-primary">Kup teraz</a>
-                    </div>
-                </div>
 
+        <div class="recommended">
+            <div class="row">
+                    <span id="recommendedLabel">Polecane dla Ciebie</span>
+            </div>
+            <div class="row">
+                    <?php foreach ($products as $product): ?>
+                    <div class="col-md-2">
+                        <a href="/product/<?= $product->getId() ?>">
+                            <div class="card">
+                                <img src="<?= $product->getThumbnailPicture() ?>" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title"><?= $product->getTitle() ?></h5>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <?php endforeach; ?>
             </div>
         </div>
     </div>
