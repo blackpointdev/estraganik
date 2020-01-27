@@ -21,8 +21,7 @@ class ProductController extends Controller
 
         if(!$product) {
             echo("Produkt nie został znaleziony w bazie danych.");
-            $this->render('product');
-            return;
+            return $this->render('product');
         }
         $this->render('product', ['product' => $product]);
     }

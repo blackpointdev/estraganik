@@ -54,8 +54,7 @@ class RegisterController extends Controller
 
             //Execute the statement and insert the new account.
             $result = $stmt->execute();
-            $this->render('register', ['messages' => ['Konto utworzone pomyślnie!']]);
-            return;
+            return $this->render('register', ['messages' => ['Konto utworzone pomyślnie!']]);
         }
         $this->render('register');
     }

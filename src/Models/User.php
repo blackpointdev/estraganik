@@ -16,12 +16,11 @@ class User
     /**
      * User constructor.
      * @param $id
-     * @param $email
      * @param $password
      * @param $name
      * @param $surname
      */
-    public function __construct($email, $password, $name, $surname, $id = null)
+    public function __construct(string $email, $password, $name, $surname, $id = null)
     {
         $this->email = $email;
         $this->password = $password;
@@ -62,10 +61,7 @@ class User
         return $this->name;
     }
 
-    /**
-     * @return mixed
-     */
-    public function getSurname()
+    public function getSurname(): string
     {
         return $this->surname;
     }
