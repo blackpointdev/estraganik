@@ -20,24 +20,20 @@ class Product
     private $thumbnail_picture;
     private $sponsored;
 
-    /**
-     * Product constructor.
-     * @param $id
-     * @param $title
-     * @param $id_seller
-     * @param $seller
-     * @param $id_category
-     * @param $category
-     * @param $condition
-     * @param $sold
-     * @param $available
-     * @param $price
-     * @param $description
-     * @param $thumbnail_picture
-     * @param $sponsored
-     */
-    public function __construct($id, $title, $id_seller, $seller, $id_category, $category, $condition,
-                                $sold, $available, $price, $description, $thumbnail_picture, $sponsored)
+
+    public function __construct(int $id,
+                                string $title,
+                                int $id_seller,
+                                string $seller,
+                                int $id_category,
+                                string $category,
+                                string $condition,
+                                int $sold,
+                                int $available,
+                                float $price,
+                                string $description,
+                                string $thumbnail_picture,
+                                int $sponsored)
     {
         $this->id = $id;
         $this->title = $title;
@@ -54,109 +50,55 @@ class Product
         $this->sponsored = $sponsored;
     }
 
-    /**
-     * @return mixed
-     */
-    public function getId()
-    {
+    public function getId() {
         return $this->id;
     }
 
-    /**
-     * @return mixed
-     */
-    public function getTitle()
-    {
+    public function getTitle() {
         return $this->title;
     }
 
-    /**
-     * @return mixed
-     */
-    public function getIdSeller()
-    {
+    public function getIdSeller() {
         return $this->id_seller;
     }
 
-    /**
-     * @return mixed
-     */
-    public function getSeller()
-    {
+    public function getSeller() {
         return $this->seller;
     }
 
-    /**
-     * @return mixed
-     */
-    public function getIdCategory()
-    {
+    public function getIdCategory() {
         return $this->id_category;
     }
 
-    /**
-     * @return mixed
-     */
-    public function getCategory()
-    {
+    public function getCategory() {
         return $this->category;
     }
 
-    /**
-     * @return mixed
-     */
-    public function getCondition()
-    {
+    public function getCondition() {
         return $this->condition;
     }
 
-    /**
-     * @return mixed
-     */
-    public function getSold()
-    {
+    public function getSold() {
         return $this->sold;
     }
 
-    /**
-     * @return mixed
-     */
-    public function getAvailable()
-    {
+    public function getAvailable() {
         return $this->available;
     }
 
-    /**
-     * @return mixed
-     */
-    public function getPrice()
-    {
+    public function getPrice() {
         return $this->price;
     }
 
-    /**
-     * @return mixed
-     */
-    public function getDescription()
-    {
+    public function getDescription() {
         return $this->description;
     }
 
-    /**
-     * @return mixed
-     */
-    public function getThumbnailPicture()
-    {
+    public function getThumbnailPicture(){
         return $this->thumbnail_picture;
     }
 
-    /**
-     * @return mixed
-     */
-    public function getSponsored()
-    {
+    public function getSponsored() {
         return $this->sponsored;
     }
-
-
 }
